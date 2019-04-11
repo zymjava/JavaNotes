@@ -1,2 +1,2 @@
-# Java-Notes
+# JavaNotes
 Java开发者之路
