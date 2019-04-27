@@ -1,23 +1,52 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
+  <title>JavaNotes</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
 </head>
 <body>
-  <div id="app">�����У����Ժ�...</div>
+  <div id="app">Loading...</div>
   <script>
     window.$docsify = {
-      loadSidebar: true,
+      loadSidebar: true,//侧边栏
+      subMaxLevel: 2,//文中标题加入到侧边栏的等级
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
-      }
+      },//避免不必要的回退过程
+      name: 'JavaNotes',
+      nameLink: '#/README',
+      repo: 'https://github.com/zymjava/JavaNotes',
+      search: {
+        paths: 'auto',
+        placeholder: '🔍  点击查询',
+        noData: '😐  无搜索结果',
+        depth: 6
+      },
+      coverpage: true,
+	  auto2top: true
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+  <script src="//unpkg.com/docsify-copy-code"></script>
+  
+  <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+  <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script>
+	const gitalk = new Gitalk({
+		clientID: 'a9af4339e01320204e57',
+		clientSecret: '9828052a10910c29a07b5a1f85c20d66b46bfc13',
+		repo: 'https://github.com/zymjava/JavaNotes',
+		owner: 'zymjava',
+		admin: ['zymjava'],
+		// facebook-like distraction free mode
+		distractionFreeMode: false
+	  })
+  </script>
 </body>
 </html>
