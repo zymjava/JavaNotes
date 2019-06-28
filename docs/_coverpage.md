@@ -1,4 +1,4 @@
-<img width="180px" src="_media/icon.jpg">
+<img width="180px" src="img/icon.jpg">
 
 # JavaNotes
 
